@@ -7,7 +7,7 @@ Usage without options:
             console.log(categorizedData)
         });
 ```
-![alt text](https://ibb.co/s5XdbHm)
+![alt text](https://i.ibb.co/RhJkYyv/1.png)
 
 
 
@@ -21,7 +21,7 @@ var forExcelParseOptions = {
             console.log(categorizedData)
         });
 ```
-![alt text](https://ibb.co/6PMm33D)
+![alt text](https://i.ibb.co/RHVQQsr/3.png)
 
 
 
@@ -38,4 +38,4 @@ var forExcelParseOptions = {
         });
 ```
 
-![alt text](https://ibb.co/HgkGGbw)
+![alt text](https://i.ibb.co/cFB1GG2/2.png)
