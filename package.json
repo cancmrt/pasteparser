@@ -1,0 +1,26 @@
+{
+  "name": "pasteparser-js",
+  "version": "1.0.0",
+  "description": "Tiny pure javascript library for pasted data to categorize and convert on html page",
+  "main": "pasteparser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cancmrt/pasteparser.git"
+  },
+  "keywords": [
+    "paste",
+    "clipboardata",
+    "excel",
+    "convert",
+    "openoffice"
+  ],
+  "author": "cancmrt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cancmrt/pasteparser/issues"
+  },
+  "homepage": "https://github.com/cancmrt/pasteparser#readme"
+}
