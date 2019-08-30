@@ -1,4 +1,5 @@
 # pasteparser
+PasterParser.js
 Tiny pure javascript library for pasted data to categorize and convert on html page
 
 Usage without options:
