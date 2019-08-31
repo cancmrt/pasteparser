@@ -11,44 +11,45 @@ var PasteTypeEnum = {
 }
 function GetElement(elementName){
     var element;
-    if(elementName.search("#") != -1)
+    if(elementName.includes("#"))
     {
         element = document.getElementById(elementName.replace("#",""));
     }
-    else if(elementName.search(".") != -1){
-        element = document.getElementById(elementName.replace(".",""));
+    else if(elementName.includes(".")){
+        element = document.getElementsByClassName(elementName.replace(".",""))[0];
     }
     else{
-        element = document.getElementsByTagName(elementName);
+        element = document.getElementsByTagName(elementName)[0];
     }
+    
     return element;
 }
 function LookFormat(clipboardData){
     var dataToHtml = clipboardData.getData("text/html");
-    if(dataToHtml.search("office:excel") != -1){
+    if(dataToHtml.includes("office:excel")){
         return PasteTypeEnum.Microsoft_Excel;
 
     }
-    else if(dataToHtml.search("office:word") != -1)
+    else if(dataToHtml.includes("office:word"))
     {
         return PasteTypeEnum.Microsoft_Word;
     }
-    else if(dataToHtml.search("office:publisher") != -1){
+    else if(dataToHtml.includes("office:publisher")){
         return PasteTypeEnum.Microsoft_Publisher;
     }
-    else if(dataToHtml.search("Microsoft OneNote") != -1)
+    else if(dataToHtml.includes("Microsoft OneNote"))
     {
         return PasteTypeEnum.Microsoft_OneNote;
     }
-    else if(dataToHtml.search("OpenOffice") !=-1 && dataToHtml.search("TABLE") != -1 && dataToHtml.search("BODY TEXT") != -1)
+    else if(dataToHtml.includes("OpenOffice") && dataToHtml.includes("TABLE") && dataToHtml.includes("BODY TEXT"))
     {
         return PasteTypeEnum.OpenOffice_Calc;
     }
-    else if(dataToHtml.search("OpenOffice") != -1 && dataToHtml.search("BODY DIR") != -1)
+    else if(dataToHtml.includes("OpenOffice") && dataToHtml.includes("BODY DIR"))
     {
         return PasteTypeEnum.OpenOffice_Writer;
     }
-    else if(dataToHtml.search("<html>") != -1){
+    else if(dataToHtml.includes("<html>")){
         return PasteTypeEnum.Html;
     }
     else
@@ -110,6 +111,10 @@ function ExcelPureDataHeaderInjector(clipboardData,options)
                 newObj[Header[j]] = pureExcelData[i][j];
         }
         refinedExcelData.push(newObj);
+    }
+    if(options.FirstColumnIsHeader)
+    {
+        refinedExcelData.splice(0, 1);
     }
     return refinedExcelData;
 }

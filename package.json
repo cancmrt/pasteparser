@@ -1,6 +1,6 @@
 {
   "name": "pasteparser-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny pure javascript library for pasted data to categorize and convert on html page",
   "main": "pasteparser.js",
   "scripts": {
