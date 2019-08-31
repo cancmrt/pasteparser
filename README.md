@@ -1,6 +1,21 @@
 # pasteparser
 PasterParser.js
+
+
+
 Tiny pure javascript library for pasted data to categorize and convert on html page
+
+You can include to your project using npm
+
+```javascript
+npm i pasteparser-js
+```
+
+or you can directly include your page using:
+
+```javascript
+<script src="https://unpkg.com/pasteparser-js@1.0.0/pasteparser.min.js"></script>
+```
 
 Usage without options:
 ```javascript
