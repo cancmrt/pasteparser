@@ -14,7 +14,7 @@ npm i pasteparser-js
 or you can directly include your page using:
 
 ```javascript
-<script src="https://unpkg.com/pasteparser-js@1.0.0/pasteparser.min.js"></script>
+<script src="https://unpkg.com/pasteparser-js@1.0.1/pasteparser.min.js"></script>
 ```
 
 Usage without options:
